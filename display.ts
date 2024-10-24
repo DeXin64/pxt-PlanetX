@@ -109,13 +109,13 @@ namespace PlanetX_Display {
         "\x00\x02\x01\x01\x02\x01\x00\x00"  // "~"
     ];
     function oledcmd(c: number) {
-        pins.i2cWriteNumber(0x3c, c, NumberFormat.UInt16BE);
+        pins.i2cWriteNumber(0x78, c, NumberFormat.UInt16BE);
     }
     function writeData(n: number) {
         let b = n;
         if (n < 0) { n = 0 }
         if (n > 255) { n = 255 }
-        pins.i2cWriteNumber(0x3c, 0x4000 + b, NumberFormat.UInt16BE);
+        pins.i2cWriteNumber(0x78, 0x4000 + b, NumberFormat.UInt16BE);
     }
     function writeCustomChar(c: string) {
         for (let i = 0; i < 8; i++) {
