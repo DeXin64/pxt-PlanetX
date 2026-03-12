@@ -2586,7 +2586,7 @@ namespace PlanetX_Basic {
                 releasePin = DigitalPin.P14
                 break;
             case DigitalRJPin.J4:
-                suctionPin = DigitalPin.P14
+                suctionPin = DigitalPin.P15
                 releasePin = DigitalPin.P16
                 break;
         }
