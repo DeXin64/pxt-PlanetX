@@ -2606,6 +2606,45 @@ namespace PlanetX_Basic {
         }
     }
 
+    //% blockId=airPump block="air pump %Rjpin %operation"
+    //% Rjpin.fieldEditor="gridpicker"
+    //% Rjpin.fieldOptions.columns=2
+    //% operation.shadow="toggleOnOff"
+    //% operation.label="suction|release"
+    //% operation.tooltips="true=suction, false=release"
+    //% subcategory=Execute group="Digital" color=#EA5532
+    export function airPump(Rjpin: DigitalRJPin, operation: boolean): void {
+        let suctionPin = DigitalPin.P1
+        let releasePin = DigitalPin.P8
+        switch (Rjpin) {
+            case DigitalRJPin.J1:
+                suctionPin = DigitalPin.P1
+                releasePin = DigitalPin.P8
+                break;
+            case DigitalRJPin.J2:
+                suctionPin = DigitalPin.P2
+                releasePin = DigitalPin.P12
+                break;
+            case DigitalRJPin.J3:
+                suctionPin = DigitalPin.P13
+                releasePin = DigitalPin.P14
+                break;
+            case DigitalRJPin.J4:
+                suctionPin = DigitalPin.P15
+                releasePin = DigitalPin.P16
+                break;
+        }
+        if (operation) {
+            pins.digitalWritePin(suctionPin, 1)
+            control.waitMicros(300000)
+            pins.digitalWritePin(suctionPin, 0)
+        } else {
+            pins.digitalWritePin(releasePin, 1)
+            control.waitMicros(100000)
+            pins.digitalWritePin(releasePin, 0)
+        }
+    }
+
     //% deprecated=true
     //% blockId=Relay block="Relay %Rjpin toggle to %Relaystate"
     //% Rjpin.fieldEditor="gridpicker"
