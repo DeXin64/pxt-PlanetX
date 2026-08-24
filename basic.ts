@@ -2606,7 +2606,7 @@ namespace PlanetX_Basic {
         }
     }
 
-    //% blockId=airPump block="water pump module %Rjpin toggle to $operation || duration %duration ms power %power \\%"
+    //% blockId=airPump block="water pump module %Rjpin toggle to $operation || power %power \\% | duration %duration ms"
     //% inlineInputMode=inline
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
