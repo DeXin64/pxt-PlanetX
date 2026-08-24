@@ -2613,7 +2613,7 @@ namespace PlanetX_Basic {
     //% operation.shadow="toggleOnOff"
     //% power.min=0 power.max=100 power.defl=100
     //% duration.min=0 duration.defl=1000
-    //% expandableArgumentMode="enabled"
+    //% expandableArgumentMode="toggle"
     //% subcategory=Execute group="Digital" color=#EA5532
     export function airPump(Rjpin: DigitalRJPin, operation: boolean, power: number = 100, duration: number = 1000): void {
         let pin = AnalogPin.P1
