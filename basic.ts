@@ -2607,12 +2607,13 @@ namespace PlanetX_Basic {
     }
 
     //% blockId=airPump block="water pump module %Rjpin toggle to $operation || duration %duration ms power %power \\%"
+    //% inlineInputMode=inline
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% operation.shadow="toggleOnOff"
     //% duration.min=0 duration.defl=1000
     //% power.min=0 power.max=100 power.defl=100
-    //% expandableArgumentMode="toggle"
+    //% expandableArgumentMode="enabled"
     //% subcategory=Execute group="Digital" color=#EA5532
     export function airPump(Rjpin: DigitalRJPin, operation: boolean, duration: number = 1000, power: number = 100): void {
         let pin = AnalogPin.P1
