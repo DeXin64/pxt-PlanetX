@@ -2606,20 +2606,11 @@ namespace PlanetX_Basic {
         }
     }
 
-    //% blockId=airPumpPowerPercentPicker block="%power \\%"
-    //% power.min=0 power.max=100 power.defl=100
-    //% blockHidden=true
-    //% shim=TD_ID
-    export function airPumpPowerPercentPicker(power: number): number {
-        return power
-    }
-
     //% blockId=airPump block="water pump module %Rjpin toggle to $operation || power %power | duration %duration ms"
     //% inlineInputMode=inline
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% operation.shadow="toggleOnOff"
-    //% power.shadow="airPumpPowerPercentPicker"
     //% power.min=0 power.max=100 power.defl=100
     //% duration.min=0 duration.defl=1000
     //% expandableArgumentMode="enabled"
